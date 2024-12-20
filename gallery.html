@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <style>
+        /* Video Container Styling */
+        .videoDisplay {
+            margin: 0;
+            height: 46vh; /* Make video section take up specific height */
+            display: flex; /* Flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            background-color: white; /* Background color */
+        }
+
+        video {
+            width: 70%; /* Video size */
+            max-width: 400px; /* Maximum size */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        button.active {
+            background-color: #4CAF50;
+            color: black;
+        }
+
+        h1 {
+            font-family: Impact, sans-serif;
+            font-size: 3rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Swiper Container */
+        .swiper {
+            width: 100%;
+            max-width: 400px;
+            height: 550px;
+            margin: 0 auto; /* Center horizontally */
+			background-color: white;
+        }
+
+        /* Swiper Slide Images */
+        .swiper-slide {
+            position: relative; /* Allow text to overlay image */
+            overflow: hidden; /* Prevent overflow */
+            border-radius: 0px; /* Rounded corners */
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Scale image while maintaining aspect ratio */
+            transition: transform 0.3s ease; /* Smooth zoom effect */
+        }
+
+        /* Hover Effect: Zoom */
+        .swiper-slide:hover img {
+            transform: scale(1.1); /* Zoom on hover */
+        }
+
+        /* Hover Text Styling */
+        .hover-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+            color: #fff; /* White text */
+            font-size: 1.2rem;
+            padding: 10px;
+            opacity: 0; /* Hidden by default */
+            transition: opacity 0.3s ease; /* Smooth fade-in effect */
+        }
+
+        /* Show Text on Hover */
+        .swiper-slide:hover .hover-text {
+            opacity: 1; /* Text becomes visible */
+        }
+		.profile-img {
+    width: 200px;  /* Adjust the size of the image */
+    height: auto;
+    border-radius: 0%;  /* Circular image */
+    margin-bottom: 20px;
+	margin-left: 50px;
+}
+    </style>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Gallery</h1>
+        <nav>
+            <ul>
+                <li><button onclick="location.href='aboutMe.html'">About Me</button></li>
+                <li><button onclick="location.href='experience.html'">My Experiences</button></li>
+                <li><button onclick="location.href='education.html';">Background Education</button></li>
+                <li><button onclick="location.href='skills.html';">Skills</button></li>
+                <li><button class="button active" onclick="location.href='gallery.html';">Gallery</button></li>
+            </ul>
+        </nav>
+        <a href="home.html" class="home-icon">
+            <i class="fas fa-home"></i>
+        </a>
+    </header>
+
+    <!-- Interactive Gallery -->
+	<section>
+	<h1>My Personal Gallery</h1>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="C:\Users\user\OneDrive - Universiti Teknologi MARA\Desktop\IMD\photo 6.jpg" alt="1">
+                <div class="hover-text">What a SIGMA</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="C:\Users\user\OneDrive - Universiti Teknologi MARA\Desktop\IMD\photo 5.jpg" alt="2">
+                <div class="hover-text">After cut looks</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="C:\Users\user\OneDrive - Universiti Teknologi MARA\Desktop\IMD\photo 4.jpg"alt="2">
+                <div class="hover-text">Everytime seeing the mirror</div>
+            </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+	</section>
+
+    <!-- Video Section -->
+    <div class="videoDisplay">
+        <video autoplay loop muted>
+            <source src="C:\Users\user\OneDrive - Universiti Teknologi MARA\Desktop\IMD\IMG_4657.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Swiper Container (Second Gallery) -->
+<section>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="C:\Users\user\OneDrive - Universiti Teknologi MARA\Desktop\IMD\photo 1.jpg" alt="1">
+                <div class="hover-text">Bro think he's the main character</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="C:\Users\user\OneDrive - Universiti Teknologi MARA\Desktop\IMD\photo 2.jpg" alt="2">
+                <div class="hover-text">LET HIM COOK</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="C:\Users\user\OneDrive - Universiti Teknologi MARA\Desktop\IMD\photo 3.jpg" alt="3">
+                <div class="hover-text">Another SIGMA photo</div>
+            </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright ©Shamiel Ezzuan. All Rights Reserved.</p>
+		<p>Contacts Me by<p>
+		<p>Email:Shamiel2005@yahoo.com<p>
+		<p>Tel.No: 0174562792
+    </footer>
+</body>
+</html>
